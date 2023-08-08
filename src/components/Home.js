@@ -26,6 +26,8 @@ const Home = () => {
       {console.log(data)}
       {data.articles.map((article, index) => (
         <div key={index}>
+          <h2>{article.title}</h2>
+          <h2>{article.description}</h2>
           <h2>{article.url}</h2>
         </div>
       ))}
