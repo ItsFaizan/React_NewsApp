@@ -1,8 +1,7 @@
 import React, {useState} from 'react'
 import {FaBars, FaTimes} from 'react-icons/fa'
-import {Link} from 'react-scroll'
 import news from '../assets/newspaper-news-line-icon-linear-app-vector-23828510.jpg';
-
+import { Link } from 'react-router-dom';
 export const Navbar = () => {
   const [nav, setNav] = useState(false)
   const handleClick = () => setNav(!nav)
@@ -11,13 +10,13 @@ export const Navbar = () => {
       
       <div className='flex items-center'>
   <img src={news} alt="news" className='w-16 h-16 mt-0' />
-  <h1 className='font-bold text-4xl ml-2'>NewsFlasher</h1>
+  <button className='font-bold text-4xl ml-2'><Link to ="/"> NewsFlasher </Link></button>
 </div>
 
       
         <ul className='hidden md:flex font-bold space-x-8'>
             <li>
-              <Link to="home" smooth={true} duration={500}>Home</Link>
+              <Link to="/" smooth={true} duration={500}>Home</Link>
             </li>
             <li>
             <Link to="about" smooth={true} duration={500}>About</Link>
