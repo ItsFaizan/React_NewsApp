@@ -10,7 +10,7 @@ const initialState = {
 
 export const fetchData = createAsyncThunk('data/fetchData', async () => {
   try {
-    const response = await axios.get('https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=56e7342aa7af4584b0c630536a4ffb08');
+    const response = await axios.get('https://newsapi.org/v2/top-headlines?country=us&apiKey=56e7342aa7af4584b0c630536a4ffb08');
     return response.data;
   } catch (error) {
     throw error;
