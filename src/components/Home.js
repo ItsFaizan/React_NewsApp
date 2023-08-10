@@ -1,36 +1,36 @@
+// DataComponent.js
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchDataFromAPI } from '../redux/action';
+import { fetchData } from '../redux/dataSlice'; // Your data slice file
 
 const Home = () => {
-  const data = useSelector((state) => state.data.data);
-  const loading = useSelector((state) => state.data.loading);
-  const error = useSelector((state) => state.data.error);
-
   const dispatch = useDispatch();
+  const { data, loading, error } = useSelector((state) => state.data);
 
   useEffect(() => {
-    dispatch(fetchDataFromAPI());
+    dispatch(fetchData());
   }, [dispatch]);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <p>Loading...</p>;
   }
 
   if (error) {
-    return <div>Error: {error}</div>;
+    return <p>Error: {error}</p>;
   }
 
   return (
     <div>
-      {console.log(data)}
-      {data.articles.map((article, index) => (
-        <div key={index}>
-          <h2>{article.title}</h2>
-          <h2>{article.description}</h2>
-          <h2>{article.url}</h2>
-        </div>
-      ))}
+      <h1>Data from API</h1>
+      <ul>
+        {data.articles.map((item) => (
+          <li>
+            {item.title}
+            <h1>{item.author}</h1>
+           
+            </li>
+        ))}
+      </ul>
     </div>
   );
 };
