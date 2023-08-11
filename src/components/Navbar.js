@@ -19,16 +19,16 @@ export const Navbar = () => {
               <Link to="/" smooth={true} duration={500}>Home</Link>
             </li>
             <li>
-            <Link to="about" smooth={true} duration={500}>About</Link>
+            <Link to="/category/sports" smooth={true} duration={500}>Sports</Link>
             </li>
             <li>
-            <Link to="news" smooth={true} duration={500}>News</Link>
+            <Link to="/category/technology" smooth={true} duration={500}>Technology</Link>
             </li>
             <li>
-            <Link to="profile" smooth={true} duration={500}>Profile</Link>
+            <Link to="/category/general" smooth={true} duration={500}>General</Link>
             </li>
             <li>
-            <Link to="contact" smooth={true} duration={500}>Contact</Link>
+            <Link to="/contact" smooth={true} duration={500}>Contact</Link>
             </li>
         </ul>
 
@@ -37,11 +37,11 @@ export const Navbar = () => {
       </div>
       
       <ul className={!nav ? 'hidden' : 'absolute top-0 left-0 w-full h-screen bg-white flex flex-col justify-center items-center'}>
-            <li className='py-6 text-4xl'> <Link onClick={handleClick} to="home" smooth={true} duration={500}>Home</Link> </li>
-            <li className='py-6 text-4xl'> <Link onClick={handleClick} to="about" smooth={true} duration={500}>About</Link> </li>
-            <li className='py-6 text-4xl'> <Link onClick={handleClick} to="news" smooth={true} duration={500}>News</Link></li>
-            <li className='py-6 text-4xl'> <Link onClick={handleClick} to="profile" smooth={true} duration={500}>Profile</Link></li>
-            <li className='py-6 text-4xl'> <Link onClick={handleClick} to="contact" smooth={true} duration={500}>Contact</Link></li>
+            <li className='py-6 text-4xl'> <Link onClick={handleClick} to="/" smooth={true} duration={500}>Home</Link> </li>
+            <li className='py-6 text-4xl'> <Link onClick={handleClick} to="/category/sports" smooth={true} duration={500}>Sports</Link> </li>
+            <li className='py-6 text-4xl'> <Link onClick={handleClick} to="/category/technology" smooth={true} duration={500}>Technology</Link></li>
+            <li className='py-6 text-4xl'> <Link onClick={handleClick} to="/category/general" smooth={true} duration={500}>General</Link></li>
+            <li className='py-6 text-4xl'> <Link onClick={handleClick} to="/contact" smooth={true} duration={500}>Contact</Link></li>
         </ul>
 
     
