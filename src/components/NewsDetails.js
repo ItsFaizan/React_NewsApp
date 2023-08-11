@@ -23,7 +23,7 @@ export const NewsDetails = () => {
                 <div className="p-4">
                     <p className="text-xl font-bold text-gray-800 mb-2">{item.title}</p>
                     <p className="text-gray-600">{item.description}</p>
-                    <p className="text-gray-600">{item.content}</p>
+                    <p className="text-gray-600 ">{item.content}</p>
                     <p className="text-gray-600 font-semibold">Written by: {item.author}</p>
                     <p className="text-gray-600 font-semibold">Published at: {item.publishedAt}</p>
                     </div>
